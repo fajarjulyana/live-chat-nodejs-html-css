@@ -1,0 +1,53 @@
+body {
+  background-color: #f8f8f8;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #333;
+  font-size: 24px;
+  margin: 20px;
+  text-align: center;
+}
+
+#messages {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 400px;
+  margin: 20px;
+  overflow: auto;
+  padding: 10px;
+}
+
+#message-form {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+#message-form input[type='text'] {
+  border: none;
+  border-radius: 5px;
+  flex: 1;
+  font-size: 16px;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+#message-form button {
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+}
+
+#message-form button:hover {
+  background-color: #555;
+}

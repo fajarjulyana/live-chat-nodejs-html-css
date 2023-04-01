@@ -1,0 +1,25 @@
+{
+  "name": "live-chat-nodejs-html-css",
+  "version": "1.0.0",
+  "description": "Simple Live Chat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fajarjulyana/live-chat-nodejs-html-css.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fajarjulyana/live-chat-nodejs-html-css/issues"
+  },
+  "homepage": "https://github.com/fajarjulyana/live-chat-nodejs-html-css#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "socket.io": "^4.6.1"
+  }
+}

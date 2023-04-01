@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta charset="utf-8" />
+  <title>Live Chat</title>
+     <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Live Chat</h1>
+    <div id="messages"></div>
+    <form id="message-form">
+      <input type="text" name="message" placeholder="Type a message" />
+      <button>Send</button>
+    </form>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      const socket = io();
+
+      // Event listener untuk menangkap event 'message' dari server
+      socket.on('message', (message) => {
+        const messages = document.getElementById('messages');
+        const newMessage = document.createElement('div');
+        newMessage.innerHTML = message;
+        messages.appendChild(newMessage);
+        messages.scrollTop = messages.scrollHeight;
+      });
+
+      const messageForm = document.getElementById('message-form');
+
+      messageForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const messageInput = event.target.elements
+    ['message'];
+
+    // Mengirim pesan baru ke server
+    socket.emit('sendMessage', messageInput.value, () => {
+      // Callback untuk membersihkan input field setelah mengirim pesan
+      messageInput.value = '';
+      messageInput.focus();
+    });
+  });
+</script>
+  </body>
+</html>
